@@ -18,16 +18,19 @@ module.exports = function(config) {
       //'test-runner.js'
     ],
     //proxies: {
-    //  '/': '/base/',
-    //  '/test/': '/base/test/',
     //  '/jspm_packages/': '/base/jspm_packages/'
     //},
 
     jspm: {
       loadFiles: [
-      'src/app.ts', 
-      'src/app.test.ts' 
+        'src/app.ts', 
+        'src/app.test.ts' 
       ]
+    },
+
+    proxies: {
+      '/src/': '/base/src/',
+      '/jspm_packages/': '/base/jspm_packages/'
     },
 
 
@@ -69,7 +72,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
