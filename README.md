@@ -28,6 +28,7 @@ TLDR :
 
 ```jspm bundle-sfx src/app.ts! dist/build.js```
 ( warning currently this is not working, will investigate asap )
+( update: added issue about it, found hackarround https://github.com/frankwallis/plugin-typescript/issues/32 )
 
 
 
