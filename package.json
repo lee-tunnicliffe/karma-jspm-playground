@@ -1,0 +1,32 @@
+{
+  "name": "jspm-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/http-server/bin/http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "ts": "github:frankwallis/plugin-typescript@^2.0.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel@^4.7.16",
+      "babel-runtime": "npm:babel-runtime@^4.7.16"
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "karma": "^0.13.3",
+    "karma-chai": "^0.1.0",
+    "karma-jspm": "^2.0.1-beta.1",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17"
+  }
+}
