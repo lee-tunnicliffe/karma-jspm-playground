@@ -22,10 +22,8 @@ module.exports = function(config) {
     //},
 
     jspm: {
-      loadFiles: [
-        'src/app.ts', 
-        'src/app.test.ts' 
-      ]
+      loadFiles: ['src/app.test.ts'],
+      serveFiles: ['src/app.ts']
     },
 
     proxies: {
@@ -77,6 +75,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   });
 };

@@ -1,17 +1,18 @@
 System.config({
-  "baseURL": "/",
-  "transpiler": "babel",
-  "babelOptions": {
+  baseURL: "/",
+  defaultJSExtensions: false,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime"
     ]
   },
-  "paths": {
-    "*": "*.js",
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
-  "packages": {
+
+  packages: {
     "app": {
       "defaultExtension": "ts",
       "meta": {
@@ -20,13 +21,12 @@ System.config({
         }
       }
     }
-  }
-});
+  },
 
-System.config({
-  "map": {
+  map: {
     "babel": "npm:babel@4.7.16",
     "babel-runtime": "npm:babel-runtime@4.7.16",
+    "core-js": "npm:core-js@1.2.6",
     "ts": "github:frankwallis/plugin-typescript@2.0.4",
     "typescript": "npm:typescript@1.5.3",
     "typescript-runtime": "npm:babel-runtime@4.7.16",
@@ -53,6 +53,12 @@ System.config({
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
     },
+    "npm:core-js@1.2.6": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"
     },
@@ -70,4 +76,3 @@ System.config({
     }
   }
 });
-
